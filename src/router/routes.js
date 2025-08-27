@@ -3,4 +3,5 @@ export const routes = [
   { path: "/projects", page: "projects", title: "Projects" },
   { path: "/about", page: "about", title: "About" },
   { path: "/contacts", page: "contacts", title: "Contacts" },
+  { path: "/login", page: "login", title: "Login" },
 ];
