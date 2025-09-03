@@ -1,7 +1,8 @@
 import { MyButton } from "/src/shared/ui/MyButton";
 import { MyInput } from "/src/shared/ui/MyInput";
 
-const app = document.getElementById("app");
+const inputsDisplay = document.querySelector(".inputs");
+const buttonDisplay = document.querySelector(".button")
 
 export function init() {
 	const loginBtn = MyButton("Login");
@@ -13,7 +14,11 @@ export function init() {
 		"fa-solid fa-eye-slash",
 	);
  
-	app.append(emailInput, passwordInput, loginBtn);
+	inputsDisplay.innerHTML = "";
+	inputsDisplay.append(emailInput, passwordInput);
+
+	buttonDisplay.innerHTML = "";
+	buttonDisplay.append(loginBtn);
 
 	loginBtn.addEventListener("click", async () => {
 		const user = {
@@ -34,7 +39,7 @@ export function init() {
 			);
 			const data = await response.json();
 
-			app.innerHTML = successfullLogin(data.data.user.username);
+			inputsDisplay.innerHTML = successfullLogin(data.data.user.username);
 
 			setTimeout(() => {
 				window.navigate("/");

@@ -25,6 +25,8 @@ function setActiveLink(urlHref) {
   });
 }
 
+window.navigate("/login")
+
 window.onpopstate = () => {
   setActiveLink(window.location.href);
 };
