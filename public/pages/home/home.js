@@ -7,9 +7,6 @@ const app = document.querySelector("#app")
 export function init() {
   const user = new User("farikkm", "1234", "email@gmail.com", "samurai", "Fariz Mirzayev");
 
-  console.log(user)
-  console.log(register(user));
-
   const usernameInput = MyInput("username", "text", "Username", "/icons/username.svg");
 
   // document.body.innerHTML = "";

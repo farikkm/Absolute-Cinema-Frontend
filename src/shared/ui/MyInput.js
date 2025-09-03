@@ -1,4 +1,4 @@
-function MyInput(id, type, placeholder, iconUrl) {
+function MyInput(id, type, placeholder, iconClassName) {
 	const wrapper = document.createElement("div");
 	wrapper.className = "input-wrapper";
 
@@ -8,19 +8,11 @@ function MyInput(id, type, placeholder, iconUrl) {
 	input.type = type;
 	input.placeholder = placeholder;
 
-	const img = document.createElement("img");
-	img.src = iconUrl;
-	img.alt = iconUrl.split("/").pop();
+	const icon = document.createElement("i");
+	icon.className = iconClassName;
 
-	wrapper.append(input, img);
-
-	const obj = {
-		name: "Fariz",
-		lastName: "Mirzayev",
-	};
-
-	const obj2 = { name: "farik" };
-
+	wrapper.append(input, icon);
+	
 	return wrapper;
 }
 
