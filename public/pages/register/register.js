@@ -29,7 +29,7 @@ export function init() {
     buttonDisplay.append(loginBtn);
 
 
-    // Listeners
+    // Listeners AI
     loginBtn.addEventListener("click", async () => {
         const user = {
             username: usernameInput.firstChild.value,
