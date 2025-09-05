@@ -11,8 +11,20 @@ function MyInput(id, type, placeholder, iconClassName) {
 	const icon = document.createElement("i");
 	icon.className = iconClassName;
 
+	if (type === "password") {
+		icon.onclick = () => {
+			if (input.type === "password") {
+				input.type = "text";
+				icon.className = "fa-solid fa-eye"
+			} else {
+				input.type = "password";
+				icon.className = "fa-solid fa-eye-slash"
+			}
+		}
+	}
+
 	wrapper.append(input, icon);
-	
+
 	return wrapper;
 }
 

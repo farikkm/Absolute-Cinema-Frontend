@@ -1,4 +1,4 @@
-.login.wrapper {
+.register.wrapper {
 	height: 100vh;
 
 	background: linear-gradient(248.7deg, #030a1b 68.64%, #9747ff 206.69%);
@@ -6,7 +6,12 @@
 	display: flex;
 }
 
-.login.container {
+#error-message {
+	color: red;
+	text-align: center;
+}
+
+.register.container {
 	max-width: 1280px;
 	margin: 0 auto;
 
@@ -73,14 +78,17 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 50px;
+	gap: 30px;
 
     margin-bottom: 25px;
 }
 
-.forgot-password {
-	display: block;
-	margin-bottom: 25px;
+.inputs > * {
+    width: 100%;
+}
+
+.button {
+    margin-top: 25px;
 }
 
 @media (min-width: 768px) {
@@ -88,34 +96,6 @@
 		display: block;
 	}
 	.left {
-		margin-top: 150px;
+		margin-top: 70px;
 	}
-}
-
-
-/* ================== Successful Login  ================== */
-.successful-login.wrapper {
-	width: 100%;
-	height: 100vh;
-	background: linear-gradient(248.7deg, #030a1b 68.64%, #9747ff 206.69%);
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-.successful-login > img {
-	margin-bottom: 40px;
-	font-size: 24px;
-}
-
-.successful-login > span {
-	margin-bottom: 70px;
-	font-size: 48px;
-}
-
-.successful-login > span,
-.successful-login > h1 {
-	text-align: center;
 }

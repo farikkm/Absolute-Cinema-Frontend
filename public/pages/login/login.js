@@ -2,7 +2,8 @@ import { MyButton } from "/src/shared/ui/MyButton";
 import { MyInput } from "/src/shared/ui/MyInput";
 
 const inputsDisplay = document.querySelector(".inputs");
-const buttonDisplay = document.querySelector(".button")
+const buttonDisplay = document.querySelector(".button");
+const loginWrapper = document.querySelector(".login.wrapper")
 
 export function init() {
 	const loginBtn = MyButton("Login");
@@ -39,7 +40,7 @@ export function init() {
 			);
 			const data = await response.json();
 
-			inputsDisplay.innerHTML = successfullLogin(data.data.user.username);
+			loginWrapper.innerHTML = successfullLogin(data.data.user.username);
 
 			setTimeout(() => {
 				window.navigate("/");
@@ -53,11 +54,11 @@ export function init() {
 }
 
 function successfullLogin(username) {
-	const wrapper = document.createElement("div");
-    wrapper.className = ""
-
-	const usernameDisplay = document.createElement("h1");
-	usernameDisplay.textContent = username;
-
-	return wrapper;
+	return `
+		<div class="successful-login wrapper">
+			<img src="/images/auth/user-icon.png" alt="user-icon" />
+			<span>${username}</span>
+			<h1>You have successfully logged in</h1>
+		</div>
+	`
 }
