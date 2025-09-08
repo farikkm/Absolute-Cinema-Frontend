@@ -1,44 +1,62 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/icons/all-right-reserved.svg"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/assets/styles/fonts.css" />
-    <link rel="stylesheet" href="./src/assets/styles/main.css" />
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/icons/all-right-reserved.svg"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./src/assets/styles/fonts.css" />
+		<link rel="stylesheet" href="./src/assets/styles/main.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <!-- <header class="header">
-        <div class="header__logo">
-          <h3>Fariz</h3>
-          <img src="/icons/all-right-reserved.svg" alt="all-right-reserved" />
-        </div>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+		/>
+		<title>Vite App</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__wrapper">
+					<div class="header__logo">
+						<img src="/icons/logo.png" alt="logo" />
+					</div>
+					<nav class="header__menu">
+						<ul class="header__list">
+							<li class="header__item">
+								<a href="#" class="header__link">Home</a>
+							</li>
+							<li class="header__item">
+								<a href="#" class="header__link">Movies</a>
+							</li>
+							<li class="header__item">
+								<a href="#" class="header__link">Series</a>
+							</li>
+							<li class="header__item">
+								<a href="#" class="header__link">Kids</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header__actions">
+						<i
+							class="header__actions_search fa-solid fa-magnifying-glass"
+						></i>
+						<i class="header__actions_profile fa-solid fa-user"></i>
+						<i
+							class="header__actions_mode fa-solid fa-sun-plant-wilt"
+						></i>
+					</div>
+				</div>
+			</header>
 
-        <nav class="header__menu">
-          <ul class="header__list">
-            <li class="header__item">
-              <a data-link href="/" class="header__link">Home</a>
-            </li>
-            <li class="header__item">
-              <a data-link href="/login" class="header__link"> Login </a>
-            </li>
-          </ul>
-        </nav>
-      </header> -->
+			<main id="app"></main>
+      <!-- <img src="/images/home/banner.png" alt=""> -->
+			<footer></footer>
+		</div>
 
-      <main id="app"></main>
-
-      <footer></footer>
-    </div>
-
-    <script type="module" src="/src/main.js"></script>
-  </body>
+		<script type="module" src="/src/main.js"></script>
+	</body>
 </html>

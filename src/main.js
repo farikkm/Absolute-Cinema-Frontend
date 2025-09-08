@@ -25,6 +25,10 @@ function setActiveLink(urlHref) {
   });
 }
 
+// window.addEventListener("DOMContentLoaded", () => {
+//   window.navigate("/login")
+// })
+
 window.onpopstate = () => {
   setActiveLink(window.location.href);
 };
