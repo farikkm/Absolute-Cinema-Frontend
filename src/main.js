@@ -5,30 +5,26 @@ const header = document.querySelector("header");
 setActiveLink(window.location.href);
 
 header?.addEventListener("click", (e) => {
-  const link = e.target.closest(".header__link");
+	const link = e.target.closest(".header__link");
 
-  if (link && header.contains(link)) {
-    setActiveLink(link.href);
-  }
+	if (link && header.contains(link)) {
+		setActiveLink(link.href);
+	}
 });
 
 function setActiveLink(urlHref) {
-  document.querySelectorAll(".header__item").forEach((item) => {
-    const link = item.querySelector("a");
-    if (!link) return;
+	document.querySelectorAll(".header__item").forEach((item) => {
+		const link = item.querySelector("a");
+		if (!link) return;
 
-    if (link.href === urlHref) {
-      item.classList.add("_active");
-    } else {
-      item.classList.remove("_active");
-    }
-  });
+		if (link.href === urlHref) {
+			item.classList.add("_active");
+		} else {
+			item.classList.remove("_active");
+		}
+	});
 }
 
-// window.addEventListener("DOMContentLoaded", () => {
-//   window.navigate("/login")
-// })
-
 window.onpopstate = () => {
-  setActiveLink(window.location.href);
+	setActiveLink(window.location.href);
 };

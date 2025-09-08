@@ -40,6 +40,10 @@ export function init() {
 			);
 			const data = await response.json();
 
+			localStorage.setItem(
+				"absolute-cinema-access-token",
+				data.data.accessToken,
+			);
 			loginWrapper.innerHTML = successfullLogin(data.data.user.username);
 
 			setTimeout(() => {
