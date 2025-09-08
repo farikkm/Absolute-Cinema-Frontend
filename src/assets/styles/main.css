@@ -10,14 +10,29 @@
 
 /* ===================== Base Styles ===================== */
 
+html,
+body {
+	background-color: #030a1b;
+}
+
 body {
 	font-family: "Lato";
 	font-weight: 500;
 	font-style: normal;
+
+	color: #fff;
 }
 
 a {
 	text-decoration: none;
+	color: #fff;
+}
+
+input {
+	color: #fff;
+}
+
+button {
 	color: #fff;
 }
 

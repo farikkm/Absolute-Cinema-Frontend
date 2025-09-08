@@ -1,5 +1,5 @@
 .register.wrapper {
-	height: 100vh;
+	min-height: 100vh;
 
 	background: linear-gradient(248.7deg, #030a1b 68.64%, #9747ff 206.69%);
 
@@ -15,7 +15,7 @@
 	max-width: 1280px;
 	margin: 0 auto;
 
-	padding: 0 15px;
+	padding: 30px 15px;
 
 	display: flex;
 	align-items: center;
@@ -23,13 +23,11 @@
 }
 
 .left {
-    margin-top: 80px;
-	align-self: flex-start;
 	min-width: 300px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .right {
@@ -37,7 +35,9 @@
 }
 
 .right > img {
+	height: 700px;
 	max-width: 100%;
+	object-fit: cover;
 }
 
 .title {
@@ -48,7 +48,7 @@
 .links {
 	display: flex;
 	justify-content: space-between;
-    gap: 100px;
+	gap: 100px;
 	padding: 0 20px;
 
 	margin-bottom: 86px;
@@ -80,22 +80,52 @@
 	align-items: center;
 	gap: 30px;
 
-    margin-bottom: 25px;
+	width: 100%;
+
+	margin-bottom: 25px;
 }
 
 .inputs > * {
-    width: 100%;
+	width: 100%;
 }
 
 .button {
-    margin-top: 25px;
+	margin-top: 25px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+	.inputs {
+		width: 80%;
+	}
 	.right {
 		display: block;
 	}
-	.left {
-		margin-top: 70px;
-	}
+}
+
+/* ================== Successfull Register ================== */
+
+.successful-register.wrapper {
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(248.7deg, #030a1b 68.64%, #9747ff 206.69%);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.successful-register > img {
+	margin-bottom: 40px;
+	font-size: 24px;
+}
+
+.successful-register > span {
+	margin-bottom: 70px;
+	font-size: 48px;
+}
+
+.successful-register > span,
+.successful-register > h1 {
+	text-align: center;
 }

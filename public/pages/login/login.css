@@ -1,5 +1,5 @@
 .login.wrapper {
-	height: 100vh;
+	min-height: 100vh;
 
 	background: linear-gradient(248.7deg, #030a1b 68.64%, #9747ff 206.69%);
 
@@ -10,7 +10,7 @@
 	max-width: 1280px;
 	margin: 0 auto;
 
-	padding: 0 15px;
+	padding: 30px 15px;
 
 	display: flex;
 	align-items: center;
@@ -18,13 +18,11 @@
 }
 
 .left {
-    margin-top: 80px;
-	align-self: flex-start;
 	min-width: 300px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .right {
@@ -32,6 +30,7 @@
 }
 
 .right > img {
+	height: 500px;
 	max-width: 100%;
 }
 
@@ -43,7 +42,7 @@
 .links {
 	display: flex;
 	justify-content: space-between;
-    gap: 100px;
+	gap: 100px;
 	padding: 0 20px;
 
 	margin-bottom: 86px;
@@ -75,7 +74,13 @@
 	align-items: center;
 	gap: 50px;
 
-    margin-bottom: 25px;
+	width: 100%;
+
+	margin-bottom: 25px;
+}
+
+.inputs > * {
+	width: 100%;
 }
 
 .forgot-password {
@@ -83,15 +88,14 @@
 	margin-bottom: 25px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+	.inputs {
+		width: 80%;
+	}
 	.right {
 		display: block;
 	}
-	.left {
-		margin-top: 150px;
-	}
 }
-
 
 /* ================== Successful Login  ================== */
 .successful-login.wrapper {

@@ -3,7 +3,7 @@ import { MyInput } from "/src/shared/ui/MyInput";
 
 const inputsDisplay = document.querySelector(".inputs");
 const buttonDisplay = document.querySelector(".button");
-const loginWrapper = document.querySelector(".login.wrapper")
+const loginWrapper = document.querySelector(".login.wrapper");
 
 export function init() {
 	const loginBtn = MyButton("Login");
@@ -14,7 +14,7 @@ export function init() {
 		"Password",
 		"fa-solid fa-eye-slash",
 	);
- 
+
 	inputsDisplay.innerHTML = "";
 	inputsDisplay.append(emailInput, passwordInput);
 
@@ -43,7 +43,7 @@ export function init() {
 			loginWrapper.innerHTML = successfullLogin(data.data.user.username);
 
 			setTimeout(() => {
-				window.navigate("/");
+				window.navigate("/home");
 			}, 4000);
 
 			console.log(data);
@@ -60,5 +60,5 @@ function successfullLogin(username) {
 			<span>${username}</span>
 			<h1>You have successfully logged in</h1>
 		</div>
-	`
+	`;
 }

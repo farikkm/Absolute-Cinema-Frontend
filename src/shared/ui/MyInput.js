@@ -6,6 +6,7 @@ function MyInput(id, type, placeholder, iconClassName) {
 	input.id = id;
 	input.name = id;
 	input.type = type;
+	input.autocomplete = "auto";
 	input.placeholder = placeholder;
 
 	const icon = document.createElement("i");
@@ -15,12 +16,12 @@ function MyInput(id, type, placeholder, iconClassName) {
 		icon.onclick = () => {
 			if (input.type === "password") {
 				input.type = "text";
-				icon.className = "fa-solid fa-eye"
+				icon.className = "fa-solid fa-eye";
 			} else {
 				input.type = "password";
-				icon.className = "fa-solid fa-eye-slash"
+				icon.className = "fa-solid fa-eye-slash";
 			}
-		}
+		};
 	}
 
 	wrapper.append(input, icon);
